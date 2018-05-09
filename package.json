@@ -1,0 +1,24 @@
+{
+  "name": "simpletweetbot",
+  "version": "1.0.0",
+  "description": "tweet about everlasting saying of great Boxers.",
+  "main": "app.js",
+  "dependencies": {
+    "cron": "^1.3.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metacur/simpleTweetBOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metacur/simpleTweetBOT/issues"
+  },
+  "homepage": "https://github.com/metacur/simpleTweetBOT#readme"
+}
