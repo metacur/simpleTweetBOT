@@ -1,6 +1,9 @@
 'use strict';
 const Twitter = require('twitter');
 const cron = require('cron').CronJob;
+const fs = require('fs');
+const tweetTexts = fs.readFileSync('tweetTexts.txt', 'utf-8');
+const tweetArray = tweetTexts.split(/\r\n|\r|\n/);
 
 
 // TwitterBOTの各種 key や token は、環境変数に保存の上、参照する
@@ -19,24 +22,7 @@ const client = new Twitter({
 // 同じツイートをしようとすると、Twitter API がエラーを返し、同じ発言はできない。
 // 同内容のツイートをするには、24 時間あけるか、間に 10 個以上ツイートを挟む必要がある。
 
-const tweets = ['ツイートするテキスト1',
-                'ツイートするテキスト2',
-                'ツイートするテキスト3',
-                'ツイートするテキスト4',
-                'ツイートするテキスト5',
-                'ツイートするテキスト6',
-                'ツイートするテキスト7',
-                'ツイートするテキスト8',
-                'ツイートするテキスト9',
-                'ツイートするテキスト10',
-                'ツイートするテキスト11',
-                'ツイートするテキスト12',
-                'ツイートするテキスト13',
-                'ツイートするテキスト14',
-                'ツイートするテキスト15',
-                'ツイートするテキスト16',
-                'ツイートするテキスト17',
-                'ツイートするテキスト18.......'];
+const tweets = tweetArray;
 
 
 // ツイートするため、statuses/update API に POST リクエスト
